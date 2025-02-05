@@ -1,5 +1,5 @@
 LitVerse
-Live preview: [LitVerse](https://lit-verse.netlify.app/)
+Live preview: https://lit-verse.netlify.app/
 
 This is a Next.js project bootstrapped with create-next-app.
 
