@@ -1,19 +1,19 @@
-"use client";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import Link from "next/link";
+'use client'; 
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Link from 'next/link';
 
 const Search = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   const handleSearch = async () => {
     if (!searchTerm.trim()) return;
 
     setLoading(true);
-    setError("");
+    setError('');
 
     try {
       const response = await axios.get(
@@ -21,7 +21,7 @@ const Search = () => {
       );
       setBooks(response.data.items || []);
     } catch (err) {
-      setError("Error fetching books.");
+      setError('Error fetching books.');
     } finally {
       setLoading(false);
     }
@@ -39,8 +39,7 @@ const Search = () => {
       <div
         className="flex items-center justify-center bg-cover bg-center h-screen relative bg-fixed"
         style={{
-          backgroundImage:
-            "url(https://via.placeholder.com/1920x1080?text=Dynamic+Book+Background)",
+          backgroundImage: 'url(https://via.placeholder.com/1920x1080?text=Dynamic+Book+Background)',
         }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -84,10 +83,7 @@ const Search = () => {
                 <div key={book.id} className="relative rounded-lg shadow-lg overflow-hidden">
                   {/* Book Cover (Full Card) */}
                   <img
-                    src={
-                      book.volumeInfo.imageLinks?.thumbnail ||
-                      "https://via.placeholder.com/150"
-                    }
+                    src={book.volumeInfo.imageLinks?.thumbnail || 'https://via.placeholder.com/150'}
                     alt={book.volumeInfo.title}
                     className="w-full h-full object-cover"
                   />
@@ -95,7 +91,7 @@ const Search = () => {
                   {/* Book Title & Author (Small and Inside the Card) */}
                   <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-2 text-white text-xs">
                     <h2 className="truncate">{book.volumeInfo.title}</h2>
-                    <p className="truncate">{book.volumeInfo.authors?.join(", ")}</p>
+                    <p className="truncate">{book.volumeInfo.authors?.join(', ')}</p>
                     <Link href={`/book/${book.id}`}>
                       <span className="text-[#E5970F] hover:underline">View Details</span>
                     </Link>
