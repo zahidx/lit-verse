@@ -195,11 +195,13 @@ export default function Navbar() {
                 >
                   ⚙️ Settings
                 </Link>
-                <button
-                  className="block w-full text-left hover:text-gray-400 dark:hover:text-gray-300 transition-colors duration-300 py-1 px-4"
+
+                <Link
+                  href="/logout"
+                  className="block hover:text-gray-400 dark:hover:text-gray-300 transition-colors duration-300 py-1 px-4"
                 >
                   🚪 Logout
-                </button>
+                </Link>
               </div>
             )}
           </div>
