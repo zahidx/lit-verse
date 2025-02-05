@@ -1,10 +1,9 @@
-// components/Hero.js
 import React from "react";
 import { motion } from "framer-motion"; // Ensure you have framer-motion installed for animations.
 
 const Hero = () => {
   return (
-    <div className=" w-full relative bg-gradient-to-r from-indigo-600 to-purple-700 dark:bg-gradient-to-r dark:from-[#0E1628] dark:to-[#380643] text-white text-center py-20 ">
+    <div className="w-full relative bg-gradient-to-r from-indigo-600 to-purple-700 dark:bg-gradient-to-r dark:from-[#0E1628] dark:to-[#380643] text-white text-center py-20 overflow-x-hidden overflow-y-hidden">
       {/* Animated Background */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-700 dark:from-[#0E1628] dark:to-[#380643] opacity-50"

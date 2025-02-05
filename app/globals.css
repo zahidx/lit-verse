@@ -39,3 +39,22 @@ body {
 .animate-slide-in {
   animation: slideIn 1s ease-out;
 }
+/* styles/globals.css */
+* {
+  overflow-x: hidden;
+}
+/* globals.css or tailwind.css */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+/* Add this to your global styles (styles/globals.css or styles/tailwind.css) */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* For Internet Explorer 10+ */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* For Safari and Chrome */
+}
