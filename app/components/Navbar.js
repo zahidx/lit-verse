@@ -137,6 +137,8 @@ export default function Navbar() {
 
           <Link href="/trending" className="hover:text-gray-300 dark:hover:text-gray-400 transition-colors duration-300">🔥 Trending</Link>
           <Link href="/library" className="hover:text-gray-300 dark:hover:text-gray-400 transition-colors duration-300">📚 My Library</Link>
+          <Link href="/login" className="hover:text-gray-300 dark:hover:text-gray-400 transition-colors duration-300">🔒 Login</Link>
+
         </div>
 
         {/* User Profile, Notifications & Theme Toggle */}
@@ -234,7 +236,10 @@ export default function Navbar() {
 
           <Link href="/trending" className="block hover:text-gray-400 dark:hover:text-gray-300 transition-colors duration-300">🔥 Trending</Link>
           <Link href="/library" className="block hover:text-gray-400 dark:hover:text-gray-300 transition-colors duration-300">📚 My Library</Link>
+          <Link href="/login" className="block hover:text-gray-400 dark:hover:text-gray-300 transition-colors duration-300">🔒 Login</Link>
+
         </div>
+        
       )}
     </nav>
   );

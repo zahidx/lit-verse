@@ -3,7 +3,7 @@ import { motion } from "framer-motion"; // Ensure you have framer-motion install
 
 const Hero = () => {
   return (
-    <div className="w-full relative bg-gradient-to-r from-indigo-600 to-purple-700 dark:bg-gradient-to-r dark:from-[#0E1628] dark:to-[#380643] text-white text-center py-20 overflow-x-hidden overflow-y-hidden">
+    <div className="w-full relative bg-gradient-to-r from-indigo-200 to-purple-900 dark:bg-gradient-to-r dark:from-[#0E1628] dark:to-[#380643] text-white text-center py-20 overflow-x-hidden overflow-y-hidden">
       {/* Animated Background */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-700 dark:from-[#0E1628] dark:to-[#380643] opacity-50"
@@ -34,7 +34,7 @@ const Hero = () => {
       {/* Call to Action Button with Hover Effects */}
       <motion.a
         href="#search"
-        className="px-8 py-4 bg-white text-indigo-600 rounded-full text-lg font-semibold shadow-xl hover:bg-indigo-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110"
+        className="px-8 py-4 bg-gray-50 text-indigo-600 rounded-full text-lg font-semibold shadow-xl hover:bg-indigo-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110"
         aria-label="Start Searching"
         whileHover={{
           scale: 1.05,

@@ -39,22 +39,50 @@ body {
 .animate-slide-in {
   animation: slideIn 1s ease-out;
 }
-/* styles/globals.css */
-* {
-  overflow-x: hidden;
-}
-/* globals.css or tailwind.css */
-html, body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-/* Add this to your global styles (styles/globals.css or styles/tailwind.css) */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* For Internet Explorer 10+ */
-  scrollbar-width: none; /* For Firefox */
+/* Magical Pulse Effect */
+.social-icon {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none; /* For Safari and Chrome */
+.social-icon:hover {
+  transform: scale(1.1);  /* Slightly enlarge on hover */
+  color: #4CAF50;  /* Change color on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Shadow effect */
+}
+
+/* Shine Effect */
+.social-icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover::after {
+  opacity: 1;  /* Shine effect visible */
+}
+
+/* Bounce Effect */
+.social-icon:hover {
+  animation: bounce 0.5s ease infinite;  /* Infinite bounce animation */
+}
+
+/* Bounce Keyframes */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);  /* Bounce up */
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
